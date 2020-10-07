@@ -1,12 +1,12 @@
-const assert = require('assert')
-const thumbWar = require('../thumb-war')
-const utils = require('../utils')
+const assert = require("assert");
+const thumbWar = require("../thumb-war");
+const utils = require("../utils");
 
-const originalGetWinner = utils.getWinner
-utils.getWinner = (p1, p2) => p1
+//Your code:
+//monkey patch
 
-const winner = thumbWar('Kent C. Dodds', 'Ken Wheeler')
-assert.strictEqual(winner, 'Kent C. Dodds')
+const winner = thumbWar("Corey Hammond", "Eisley Jo");
+assert.strictEqual(winner, "Corey Hammond");
 
+// Your code:
 // cleanup
-utils.getWinner = originalGetWinner
